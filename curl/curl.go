@@ -1,3 +1,3 @@
-package golib
+package curl
 
 //curl

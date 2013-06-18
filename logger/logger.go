@@ -2,8 +2,8 @@ package logger
 
 import (
 	"fmt"
-	"golib/array"
-	"golib/file"
+	"github.com/tabalt/golib/array"
+	"github.com/tabalt/golib/file"
 	"os"
 )
 

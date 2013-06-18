@@ -2,11 +2,13 @@ package config
 
 import (
 	"encoding/json"
-	"golib/logger"
+	"fmt"
+	"github.com/tabalt/golib/logger"
 	"io/ioutil"
 )
 
 var configFile string
+
 var Config map[string]interface{}
 
 //从文件读取配置
@@ -18,6 +20,10 @@ func File2Config(fileName string) bool {
 	result := true
 	if err := json.Unmarshal(file, &Config); err != nil {
 		result = false
+	}
+	goConfig, err := Config.(map[string]interface{})
+	if err != nil {
+		fmt.Println(goConfig)
 	}
 	return result
 }

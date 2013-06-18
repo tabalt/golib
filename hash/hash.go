@@ -1,4 +1,4 @@
-package golib
+package hash
 
 import (
 	"crypto/md5"
